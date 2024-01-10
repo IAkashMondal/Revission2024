@@ -4,7 +4,7 @@ const http = require("http");
 // Define the server port
 const port = 8080;
 
-// Create an HTTP server and handle requests
+// Create an HTTP server and handle requests-------------->
 http.createServer((req, res) => {
     // Write the response header
     res.writeHead(200, { "Content-Type": "text/html" });
@@ -15,6 +15,6 @@ http.createServer((req, res) => {
     // End the response
     res.end();
   }).listen(port, () => {
-    // Log a message when the server has started
+    // Log a message when the server has started---------->
     console.log(`Server started at port: ${port}`);
   });

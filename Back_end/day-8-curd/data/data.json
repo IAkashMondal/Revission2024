@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "name": "John Doe",
+    "age": 20,
+    "grade": "A"
+  },
+  {
+    "id": 2,
+    "name": "Jane Smith",
+    "age": 22,
+    "grade": "B"
+  },
+  {
+    "id": 3,
+    "name": "Bob Johnson",
+    "age": 21,
+    "grade": "C"
+  },
+  {
+    "id": 4,
+    "name": "Alice Brown",
+    "age": 23,
+    "grade": "A"
+  },
+  {
+    "id": 5,
+    "name": "Charlie Wilson",
+    "age": 20,
+    "grade": "B"
+  },
+  {
+    "id": 6,
+    "name": "Emily Davis",
+    "age": 22,
+    "grade": "C"
+  },
+  {
+    "id": 7,
+    "name": "David Lee",
+    "age": 21,
+    "grade": "A"
+  },
+  {
+    "id": 8,
+    "name": "Grace Miller",
+    "age": 23,
+    "grade": "B"
+  },
+  {
+    "id": 9,
+    "name": "Frank White",
+    "age": 20,
+    "grade": "C"
+  },
+  {
+    "id": 10,
+    "name": "Olivia Wilson",
+    "age": 22,
+    "grade": "A"
+  }
+]

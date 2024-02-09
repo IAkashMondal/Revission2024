@@ -3,10 +3,10 @@ import { TodoType } from "../apis/constans";
 
 const TodoItem = (props: TodoType) => {
     const handelUpdate =async ()=>{
-
+//
     }
     const handelDelete =()=>{
-        
+//
     }
   return (
     <div>

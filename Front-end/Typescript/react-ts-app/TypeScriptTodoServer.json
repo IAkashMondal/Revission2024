@@ -1,32 +1,38 @@
 {
   "Todos": [
     {
-      "id": "1",
-      "titel": "react",
-      "status": false,
-      "age": 7
-    },
-    {
-      "id": "2",
+      "id": 1,
       "titel": "angular",
       "status": false,
       "age": 3
     },
     {
-      "id": "3",
+      "id": 2,
       "titel": "c++",
       "status": false,
       "age": 40
     },
     {
-      "id": "4",
+      "id": 3,
       "titel": "Html",
       "status": false,
       "age": 65
     },
     {
-      "id": "b4fa",
+      "id": 4,
       "titel": "javascript",
+      "age": 9,
+      "status": false
+    },
+    {
+      "id": 5,
+      "titel": "react",
+      "age": 16,
+      "status": false
+    },
+    {
+      "id": "8543",
+      "titel": "python",
       "age": 9,
       "status": false
     }

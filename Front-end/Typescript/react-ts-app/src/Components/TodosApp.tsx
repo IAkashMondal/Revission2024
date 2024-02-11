@@ -13,7 +13,10 @@ const TodosApp = () => {
   const onAddHandel = (newTodo: TodoType) => {
     setTodos([...todos, newTodo]);
   };
-
+    // Function to handle updating a todo
+  const handelOnUpdate = (updatedTodo: TodoType) => {
+    setTodos(todos.map(todo => todo.id === updatedTodo.id ? updatedTodo : todo));
+  };
   // Fetch todos from the server on component mount
   useEffect(() => {
     GetTodos()
@@ -28,7 +31,7 @@ const TodosApp = () => {
       <Todosinput onAddHandel={onAddHandel} />
       {/* Rendering todo items */}
       {todos?.map((item) => (
-        <TodoItem key={item.id} {...item} />
+        <TodoItem key={item.id} {...item} handelOnUpdate={handelOnUpdate} />
       ))}
     </div>
   );

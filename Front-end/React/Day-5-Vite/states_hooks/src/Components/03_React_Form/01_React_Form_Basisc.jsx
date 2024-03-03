@@ -50,7 +50,7 @@ const React_Form_Basisc = () => {
               onChange={handleCheck} />
           </>
         </div>
-        <button>Submit</button>
+        <button type={"submit"}>Submit</button>
       </form>
     </div>
 

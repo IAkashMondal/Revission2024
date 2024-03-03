@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { language } from "../../../../data.json"
+import { language } from "../../../data.json"
 const Curd = () => {
     // const tableBorder css -------------->
     const tableStyle = {

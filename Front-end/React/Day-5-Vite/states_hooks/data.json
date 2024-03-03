@@ -1,0 +1,102 @@
+{
+  "language": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "age": 6
+    },
+    {
+      "id": 2,
+      "title": "react",
+      "age": 6
+    },
+    {
+      "id": 3,
+      "title": "angular",
+      "age": 4
+    }
+  ],
+
+  "data": [
+    {
+      "id": "INV-001",
+      "fruits": [
+        {
+          "name": "Apple",
+          "quantity": 5,
+          "price": 1.5
+        },
+        {
+          "name": "Banana",
+          "quantity": 3,
+          "price": 0.75
+        }
+      ],
+      "totalprice": 9
+    },
+    {
+      "id": "INV-002",
+      "fruits": [
+        {
+          "name": "Orange",
+          "quantity": 2,
+          "price": 1.25
+        },
+        {
+          "name": "Grapes",
+          "quantity": 4,
+          "price": 2.0
+        }
+      ],
+      "totalprice": 9
+    },
+    {
+      "id": "INV-003",
+      "fruits": [
+        {
+          "name": "Pineapple",
+          "quantity": 1,
+          "price": 3.0
+        },
+        {
+          "name": "Watermelon",
+          "quantity": 2,
+          "price": 2.5
+        }
+      ],
+      "totalprice": 8
+    },
+    {
+      "id": "INV-004",
+      "fruits": [
+        {
+          "name": "Strawberry",
+          "quantity": 3,
+          "price": 1.0
+        },
+        {
+          "name": "Kiwi",
+          "quantity": 2,
+          "price": 1.5
+        }
+      ],
+      "totalprice": 6
+    },
+    {
+      "id": "INV-005",
+      "fruits": [
+        {
+          "name": "Mango",
+          "quantity": 4,
+          "price": 2.0
+        },
+        {
+          "name": "Peach",
+          "quantity": 3,
+          "price": 1.75
+        }
+      ],
+      "totalprice": 14
+    }
+  ]
+}

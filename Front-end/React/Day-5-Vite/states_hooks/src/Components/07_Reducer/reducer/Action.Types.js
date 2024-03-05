@@ -1,0 +1,4 @@
+// Action Types
+export const INCREMENTCOUNT = "INCREMENTCOUNT";
+export const DECREMENTCOUNT = "DECREMENTCOUNT";
+export const RESETCOUNT = "RESETCOUNT";

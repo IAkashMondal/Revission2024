@@ -5,7 +5,7 @@ export const ApiFetch = () => {
     useEffect(() => {
         const Fetching = async () => {
             try {
-                const response = await fetch("http://localhost:3000/data")
+                const response = await fetch("http://localhost:8090/data")
                 const data = await response.json();
                 setDataTransfer(data);
 

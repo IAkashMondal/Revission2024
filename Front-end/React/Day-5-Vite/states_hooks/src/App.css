@@ -6,3 +6,13 @@
   
 }
 
+.light{
+  background-color: bisque;
+  color: black;
+  text-align: center;
+}
+.dark{
+  background-color: black;
+  color: antiquewhite;
+  text-align: center;
+}

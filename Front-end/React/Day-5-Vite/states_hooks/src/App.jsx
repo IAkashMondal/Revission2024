@@ -5,6 +5,7 @@ import React_Form_Basisc from "./Components/03_React_Form/01_React_Form_Basisc"
 import React_Form_Advance from "./Components/03_React_Form/02_React_Form_Advance"
 import { FromsDowPdf } from "./Components/04_React-Pdf-Download/FromsDowPdf";
 import { ApiFetch } from "./Components/05_useEffect_Hooks/01_ApiFetch";
+import ReducerCounter from "./Components/07_Reducer/components/ReducerCounter";
 
 function App() {
   const Wid = {
@@ -34,6 +35,10 @@ function App() {
           <tr>
             <td style={Bod}><FromsDowPdf/></td>
             <td style={Bod}><ApiFetch/></td>
+          </tr>
+          <tr>
+            <td style={Bod}><ReducerCounter/></td>
+            <td style={Bod}>fetc using reducer</td>
           </tr>
         </tbody>
       </table>

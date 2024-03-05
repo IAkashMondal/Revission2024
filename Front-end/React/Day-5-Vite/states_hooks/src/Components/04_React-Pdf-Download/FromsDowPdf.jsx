@@ -6,7 +6,7 @@ export const FromsDowPdf = () => {
     const [data, setData] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:3000/data')
+        fetch('http://localhost:8090/data')
             .then(response => response.json())
             .then(data => setData(data));
     }, []);

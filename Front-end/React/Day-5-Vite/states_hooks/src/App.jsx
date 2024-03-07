@@ -5,7 +5,8 @@ import React_Form_Basisc from "./Components/03_React_Form/01_React_Form_Basisc"
 import React_Form_Advance from "./Components/03_React_Form/02_React_Form_Advance"
 import { FromsDowPdf } from "./Components/04_React-Pdf-Download/FromsDowPdf";
 import { ApiFetch } from "./Components/05_useEffect_Hooks/01_ApiFetch";
-import ReducerCounter from "./Components/07_Reducer/components/ReducerCounter";
+import { ReducerCounter } from "./Components/07_Reducer/components/ReducerCounter";
+import { ReducerFetch } from "./Components/07_Reducer/components/ReducerFetch";
 
 function App() {
   const Wid = {
@@ -38,7 +39,7 @@ function App() {
           </tr>
           <tr>
             <td style={Bod}><ReducerCounter/></td>
-            <td style={Bod}>fetc using reducer</td>
+            <td style={Bod}><ReducerFetch/></td>
           </tr>
         </tbody>
       </table>

@@ -1,20 +1,18 @@
-import { useReducer } from 'react'
-import { reducer } from '../reducer/Reducer'
-import { decrementAction, incrementAction, resetAction } from '../reducer/Action'
-const intialstateCounter = {
-    count: 0
-}
-const ReducerCounter = () => {
-    const [ReducerState, distpath] = useReducer(reducer, intialstateCounter)
+import { useReducer } from 'react';
+import { initialStateCounter, Counterreducer } from '../reducer/Reducer';
+import { incrementAction, decrementAction, resetAction } from '../reducer/Action';
+
+export const ReducerCounter = () => {
+    const [state, dispatch] = useReducer(Counterreducer, initialStateCounter);
+
     return (
         <div>
-            <h1>ReducerCounter</h1>
-            <h3>Count: {ReducerState.reducer_count}</h3>
-            <button onClick={distpath(incrementAction())}>+</button>
-            <button onClick={distpath(decrementAction(1))}>-</button>
-            <button onClick={distpath(resetAction())}>reset</button>
+            <h1>Reducer Counter</h1>
+            <p>Count: {state.count}</p>
+            <button onClick={() => dispatch(incrementAction())}>Increment</button>
+            <button onClick={() => dispatch(decrementAction(1))}>Decrement</button>
+            <button onClick={() => dispatch(resetAction())}>Reset</button>
         </div>
-    )
-}
+    );
+};
 
-export default ReducerCounter

@@ -5,11 +5,9 @@ import {
   GET_LANGUAGE_SUCESS,
   INCREMENTCOUNT,
   RESETCOUNT,
-
 } from "./Action.Types.js";
 export const initialStateCounter = {
-  language: [],
-
+  count: 0,
 };
 export const Counterreducer = (state = initialStateCounter, action) => {
   const { type, payload } = action;
@@ -32,13 +30,13 @@ export const Counterreducer = (state = initialStateCounter, action) => {
 export const initialStateLanguage = {
   language: [],
   isLoading: false,
-  isError: false
+  isError: null,
 };
 
 export const languageReducer = (state = initialStateLanguage, action) => {
   switch (action.type) {
     case GET_LANGUAGE_LOADING:
-      return { ...state, isLoading: true, isError: false };
+      return { ...state, isLoading: true, isError: null };
     case GET_LANGUAGE_SUCESS:
       return {
         ...state,
@@ -47,7 +45,7 @@ export const languageReducer = (state = initialStateLanguage, action) => {
         isError: false,
       };
     case GET_LANGUAGE_FAILIAURE:
-      return { ...state, isLoading: false, isError: true };
+      return { ...state, isLoading: false, isError: action.payload };
     default:
       return state;
   }

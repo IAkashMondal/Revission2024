@@ -1,53 +1,31 @@
 import {
-  DECREMENTCOUNT,
-  GET_LANGUAGE_FAILIAURE,
-  GET_LANGUAGE_LOADING,
-  GET_LANGUAGE_SUCESS,
-  INCREMENTCOUNT,
-  RESETCOUNT,
-} from "./Action.Types.js";
-export const initialStateCounter = {
-  count: 0,
-};
-export const Counterreducer = (state = initialStateCounter, action) => {
-  const { type, payload } = action;
-  switch (type) {
-    case INCREMENTCOUNT:
-      return {
-        count: state.count + 1,
-      };
-    case DECREMENTCOUNT:
-      return {
-        count: state.count - payload,
-      };
-    case RESETCOUNT:
-      return { count: 0 };
-    default:
-      return state;
-  }
-};
-//Fetching Language Reducer Funbction-------------------------------------------------------->
-export const initialStateLanguage = {
-  language: [],
+  GET_DATA_FAILIAURE,
+  GET_DATA_LOADING,
+  GET_DATA_SUCESS
+} from "./Action.Types";
+
+//Fetching DATA Reducer Funbction-------------------------------------------------------->
+export const initialStateDATA = {
   isLoading: false,
   isError: null,
+  DATA: [],
 };
 
-export const languageReducer = (
-  stateData = initialStateLanguage,
+export const DataReducer = (
+  stateData = initialStateDATA,
   { type, payload }
 ) => {
   switch (type) {
-    case GET_LANGUAGE_LOADING:
+    case GET_DATA_LOADING:
       return { ...stateData, isLoading: true, isError: null };
-    case GET_LANGUAGE_SUCESS:
+    case GET_DATA_SUCESS:
       return {
         ...stateData,
         isLoading: false,
-        language: payload,
+        DATA: payload,
         isError: false,
       };
-    case GET_LANGUAGE_FAILIAURE:
+    case GET_DATA_FAILIAURE:
       return { ...stateData, isLoading: false, isError: payload };
     default:
       return stateData;

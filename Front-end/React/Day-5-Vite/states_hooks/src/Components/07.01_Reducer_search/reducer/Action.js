@@ -1,53 +1,27 @@
 import {
-  DECREMENTCOUNT,
-  GET_LANGUAGE_FAILIAURE,
-  GET_LANGUAGE_LOADING,
-  GET_LANGUAGE_SUCESS,
-  INCREMENTCOUNT,
-  RESETCOUNT,
+  GET_DATA_FAILIAURE,
+  GET_DATA_LOADING,
+  GET_DATA_SUCESS,
 } from "./Action.Types.js";
-console.log("action.js")
-// Counter actions
-export const incrementAction = () => ({ type: INCREMENTCOUNT });
-export const decrementAction = (value) => ({
-  type: DECREMENTCOUNT,
-  payload: value,
-});
-export const resetAction = () => ({ type: RESETCOUNT });
 
 // Fetching actions
-export const FetchingLoadingaction = () => ({ type: GET_LANGUAGE_LOADING });
+export const FetchingLoadingaction = () => ({ type: GET_DATA_LOADING });
 export const FetchingSucessAction = (data) => ({
-  type: GET_LANGUAGE_SUCESS,
+  type: GET_DATA_SUCESS,
   payload: data,
 });
 export const FetchingErroraction = (error) => ({
-  type: GET_LANGUAGE_FAILIAURE,
+  type: GET_DATA_FAILIAURE,
   payload: error,
 });
-// with out async and await
-export const GetLang = () => (dispatch) => {
-  dispatch(FetchingLoadingaction());
-  return fetch("http://localhost:8090/language")
-    .then((response) => {
-      if (!response.ok) {
-        throw new Error(`Network response was not ok: ${response.status}`);
-      }
-      return response.json();
-    })
-    .then((data) => {
-      dispatch(FetchingSucessAction(data));
-    })
-    .catch((error) => {
-      dispatch(FetchingErroraction(error));
-    });
-};
+
 // with  async and await this method called in the Component
-export const FetchDataLang = () => async (dispatch) => {
+export const FetchDataUser = (query) => async (dispatch) => {
   dispatch(FetchingLoadingaction());
 
   try {
-    const response = await fetch("http://localhost:8090/language");
+    const response = await fetch(`https://api.github.com/users/?q=${query}`);
+    console.log(query,"query inside")
 
     // Check for network errors (status code >= 400)
     if (!response.ok) {

@@ -39,8 +39,6 @@ const Curd = () => {
                 item.id !== itemiId)
         )
     }
-
-    console.log(lang, "lang")
     return (
         <div>
             <h1 style={{ textAlign: 'center' }}>CURD APP JSON DATA</h1>

@@ -15,7 +15,6 @@ export const ApiFetch = () => {
         }
         Fetching();
     }, [])
-    console.log(DataTransfer, "df")
     return (
         <div>
             <h1>UseEffect Fetching</h1>

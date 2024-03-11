@@ -1,0 +1,22 @@
+.tableStyle {
+  border-collapse: collapse;
+  width: 80%;
+}
+
+.thStyle {
+  background-color: "#f2f2f2";
+  border: 1px solid #dddddd;
+  padding: 8px;
+  text-align: center;
+  width: 20%;
+}
+
+.tdStyle {
+  border: 1px solid #dddddd;
+  padding: 8px;
+  text-align: center;
+  width: 20%;
+}
+.tdHoverStyle {
+  background-color: #f2f2f2;
+}

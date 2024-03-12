@@ -1,15 +1,17 @@
 {
-  "name": "day-7-reducer-redux",
+  "name": "day-8-cypresstesting",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "cypress":"cypress open",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
   "dependencies": {
+    "cypress": "^13.6.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },

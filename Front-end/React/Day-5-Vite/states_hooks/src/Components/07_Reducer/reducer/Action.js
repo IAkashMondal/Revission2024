@@ -6,7 +6,6 @@ import {
   INCREMENTCOUNT,
   RESETCOUNT,
 } from "./Action.Types.js";
-console.log("action.js")
 // Counter actions
 export const incrementAction = () => ({ type: INCREMENTCOUNT });
 export const decrementAction = (value) => ({

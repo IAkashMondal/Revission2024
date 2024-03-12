@@ -9,6 +9,10 @@ import {
   Typography,
 } from "@mui/material";
 const TodoAddItems = () => {
+  const[todoItems,settodoItems]=[{
+    fruites:"",
+    date:""
+  }]
   return (
     <Container className="center" sx={{ padding: 4 }}>
       <Box sx={{ flexGrow: 1 }}>

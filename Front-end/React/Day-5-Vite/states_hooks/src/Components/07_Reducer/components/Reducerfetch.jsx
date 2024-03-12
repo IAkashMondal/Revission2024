@@ -30,10 +30,10 @@ export const ReducerFetch = () => {
                     <tr>
                         <th>With Use effect</th>
                         <th>
-                            <tr>
-                                <th>With Button Event</th>
-                                <th><button onClick={Handelfetch}>Fetch</button></th>
-                            </tr>
+                            <>
+                                <h3>With Button Event</h3>
+                                <button onClick={Handelfetch}>Fetch</button>
+                            </>
                         </th>
                     </tr>
                 </thead>

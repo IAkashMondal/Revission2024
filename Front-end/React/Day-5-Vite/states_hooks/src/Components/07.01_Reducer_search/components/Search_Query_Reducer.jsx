@@ -1,6 +1,6 @@
-import { useEffect, useReducer, useState } from 'react';
+import { useEffect, useMemo, useReducer, useState } from 'react';
 
-import { FetchDataUser } from '../reducer/Action'; 
+import { FetchDataUserQuery } from '../reducer/Action';
 import { DataReducer, initialStateDATA } from '../reducer/Reducer';
 
 export const Search_Query_Reducer = () => {
@@ -8,24 +8,41 @@ export const Search_Query_Reducer = () => {
     const [query, setQuery] = useState("");
 
     useEffect(() => {
-        const fetchData = async () => {
+        const debouncedFetchData = debounce(async (query) => {
             try {
-                await FetchDataUser()(dispatch); // Call without query if not server-side filtering
+                await FetchDataUserQuery(query)(dispatch);
             } catch (error) {
                 console.error('Error fetching data:', error);
             }
+        }, 300);
+
+        debouncedFetchData(query);
+    }, [query]);
+
+    const filteredUsers = useMemo(() => {
+        return state.DATA.filter(lang => {
+            return (
+                lang.title.toLowerCase().includes(query.toLowerCase().trim()) ||
+                lang.age.toString() === query.trim()
+            );
+        });
+    }, [state.DATA, query])
+
+    const debounce = (func, delay) => {
+        let timerId;
+        return function (...args) {
+            if (timerId) clearTimeout(timerId);
+            timerId = setTimeout(() => {
+                func.apply(this, args);
+            }, delay);
         };
+    };
 
-        fetchData();
-    }, []); // Fetch data on component mount (or adjust as needed)
 
-    const filteredUsers = state.DATA.filter((user) =>
-        user.name.toLowerCase().includes(query.toLowerCase())
-    );
 
     return (
         <>
-            <h1>Search Query Reducer</h1>
+            <h1>Search Query Reducer with Debounce</h1>
             <input
                 type='text'
                 placeholder='Search User'
@@ -33,10 +50,10 @@ export const Search_Query_Reducer = () => {
             />
             {state.isLoading && <p>Loading...</p>}
             {state.isError && <p>Error fetching data</p>}
-            {filteredUsers.length > 0 ? (
+            {query && filteredUsers.length >= 0 ? (
                 <ul>
                     {filteredUsers.map((userData) => (
-                        <li key={userData.id}>{userData.name}</li>
+                        <li key={userData.id}>{userData.title}</li>
                     ))}
                 </ul>
             ) : (

@@ -2,7 +2,7 @@ import {
   DATA_FATCHING_FAILURE,
   DATA_FATCHING_SUCESS,
   DATA_FETCHING_LOADING,
-} from "./action.Types";
+} from "./action.Types.js";
 
 export const DataFetchingLoadingFn = () => {
   type: DATA_FETCHING_LOADING;
@@ -18,6 +18,8 @@ export const DataFetchingErrorFn = (error) => {
 export const HideLoadingIndicatorFn = () => {
   console.log("Loading indicator hidden,{value:false}");
 };
+
+// Fetchin function---------------------------------------------------------->
 export const GetDataByThunkFetching = () => async (dispatch) => {
   dispatch(DataFetchingLoadingFn());
   console.log("Lodaing........");
@@ -31,5 +33,7 @@ export const GetDataByThunkFetching = () => async (dispatch) => {
     dispatch(DataFetchingSucessFn(response.data));
   } catch (error) {
     dispatch(DataFetchingErrorFn(error));
+  } finally {
+    HideLoadingIndicatorFn();
   }
 };
